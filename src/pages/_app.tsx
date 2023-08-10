@@ -16,7 +16,7 @@ import { configureChains, createConfig, WagmiConfig } from "wagmi";
 import { avalanche, avalancheFuji } from "wagmi/chains";
 
 const chains = [avalanche, avalancheFuji];
-const projectId = process.env.WALLETCONNECT_PROJECT_ID || "470864dcd758f43b35fb76f0d0edadf2";
+const projectId = process.env.WALLETCONNECT_PROJECT_ID || "";
 
 const { publicClient } = configureChains(chains, [w3mProvider({ projectId })]);
 const wagmiConfig = createConfig({
